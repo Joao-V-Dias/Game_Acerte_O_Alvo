@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Press Start 2P", cursive;
+  cursor: crosshair;
+}
+
+#placar {
+  width: 100vw;
+  height: 10vh;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #27333e;
+  color: #ffff;
+}
+
+.menu {
+  background-color: #274f72;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 20px;
+  box-shadow: 7px 7px 22px -2px rgba(0, 0, 0, 0.56);
+  width: 40vw;
+  height: 30vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.area {
+  position: relative;
+  width: 100vw;
+  height: 90vh;
+  background-color: #303f4d;
+}
+
+.alvo {
+  width: 60px;
+  height: 60px;
+  background-color: #a3000e;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 50%;
+  box-shadow: 5px 5px 20px -2px rgba(0, 0, 0, 0.6);
+}
+
+.start {
+  background-color: rgb(150, 150, 150);
+  width: 30%;
+  height: 20%;
+  border-radius: 10px;
+  transition: 0.1s;
+}
+
+.start:hover {
+  background-color: #5d9bd1;
+  scale: 1.1;
+}
+
+.active {
+  display: none;
+}
+
+@media (max-width:920px) {
+    #placar{
+        font-size: 1rem;
+    }
+    .menu{
+        width: 60vw;
+        height: 40vw;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width:530px) {
+    #placar{
+        font-size: 0.7rem;
+    }
+    .menu .start{
+        font-size: 0.5rem;
+    }
+}
