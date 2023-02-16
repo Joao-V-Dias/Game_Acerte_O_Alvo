@@ -1,8 +1,9 @@
 const menu = document.querySelector(".menu");
+const tela_inicial = document.querySelector(".tela_inicial");
 const alvo = document.querySelector(".alvo1");
 const alvo2 = document.querySelector(".alvo2");
 const area = document.querySelector(".area");
-let tempo = 30;
+let tempo = 29;
 let score = 0;
 let best_score = 0;
 
@@ -13,6 +14,11 @@ function placar(){
 
 function spawn() {
   score++;
+
+  alvo.style.animation = ""
+  setTimeout(function(){
+    alvo.style.animation = "aumentar_tamanho 2s linear"
+  },5)
 
   let eixo_X = Math.random() * 100;
   eixo_X = eixo_X + "%";
@@ -28,9 +34,13 @@ function spawn() {
 }
 
 
-
 function spawn_alvo2 (){
   score++
+
+  alvo2.style.animation = ""
+  setTimeout(function(){
+    alvo2.style.animation = "aumentar_tamanho 1s linear"
+  },5)
 
   let eixo_X2 = Math.random() * 100;
   eixo_X2 = eixo_X2 + "%";
@@ -45,6 +55,10 @@ function spawn_alvo2 (){
   placar()
 }
 
+function start(){
+  tela_inicial.classList.toggle("active");
+  play()
+}
 
 function play() {
   menu.classList.toggle("active");
@@ -74,6 +88,7 @@ function play() {
 
       document.getElementById("pontuacao").innerText = score;
       document.getElementById("tempo").style.color = "#ffff";
+      document.getElementById("tempo").style.color = tempo;
     }
   }, 1000);
 }

@@ -16,11 +16,30 @@ body{
   width: 100vw;
   height: 10vh;
   font-size: 1.5rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   background-color: #27333e;
   color: #ffff;
+}
+
+.tela_inicial{
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  background-color: #27333e;
+  position: relative;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+}
+
+#placar, .tela_inicial, .title{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.title{
+  font-size: 10vw;
+  color: #fff;
 }
 
 .menu {
@@ -37,7 +56,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 999;
+  z-index: 99;
   color: #fff;
   font-size: 1.1rem;
 }
@@ -50,8 +69,8 @@ body{
 }
 
 .alvo {
-  width: 40px;
-  height: 40px;
+  width: 70px;
+  height: 70px;
   background-color: #a3000e;
   position: absolute;
   transform: translate(-50%, -50%);
@@ -84,6 +103,17 @@ body{
 
 .active {
   display: none;
+}
+
+@keyframes aumentar_tamanho {
+  0%{
+    width: 20px;
+    height: 20px;
+  }
+  100%{
+    width: 70px;
+    height: 70px;
+  }
 }
 
 @media (max-width:920px) {
