@@ -2,7 +2,7 @@ const menu = document.querySelector(".menu");
 const tela_inicial = document.querySelector(".tela_inicial");
 const alvo = document.querySelector(".alvo1");
 const alvo2 = document.querySelector(".alvo2");
-const area = document.querySelector(".area");
+const game = document.querySelector(".game");
 let tempo = 29;
 let score = 0;
 let best_score = 0;
@@ -57,12 +57,12 @@ function spawn_alvo2 (){
 
 function start(){
   tela_inicial.classList.toggle("active");
-  play()
+  retry()
 }
 
-function play() {
+function retry() {
   menu.classList.toggle("active");
-  area.classList.toggle("active");
+  game.classList.toggle("active");
 
   let temporizador = setInterval(function () {
     if (tempo == 5) {
@@ -84,7 +84,7 @@ function play() {
       score = 0;
 
       menu.classList.toggle("active");
-      area.classList.toggle("active");
+      game.classList.toggle("active");
 
       document.getElementById("pontuacao").innerText = score;
       document.getElementById("tempo").style.color = "#ffff";

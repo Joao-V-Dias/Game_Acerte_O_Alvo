@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
   <title>SHOOTER</title>
 </head>
 
@@ -57,26 +58,30 @@
     <span>SHOOTER</span>
     </div>
     <button class="start" onclick="start()">
-      Start
+      START
     </button>
   </div>
-  <div id="placar">
-    <p>Tempo restante:<span id="tempo">30s</span></p>
-    <p>Pontos:<span id="pontuacao">0</span></p>
-  </div>
+  
   <div class="menu">
     <p>Pontuação:<span id="pontuacao_total">0</span></p>
     <p>Melhor Pontuação:<span id="melhor_pontuacao">0</span></p>
 
-    <button class="start" onclick="play()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+    <button class="start" onclick="retry()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
       <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
       <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
     </svg></button>
   </div>
-  <div class="area active">
-    <div class="alvo alvo1" onclick="spawn()"></div>
-    <div class="alvo alvo2" onclick="spawn_alvo2()"></div>
+  <div class="game active">
+    <div id="placar">
+      <p>Tempo restante:<span id="tempo">30s</span></p>
+      <p>Pontos:<span id="pontuacao">0</span></p>
+    </div>
+    <div class="area">
+      <div class="alvo alvo1" onclick="spawn()"></div>
+      <div class="alvo alvo2" onclick="spawn_alvo2()"></div>
+    </div>
   </div>
+  
   <script src="script.js"></script>
 </body>
 
